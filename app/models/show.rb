@@ -26,5 +26,9 @@ class Show < ActiveRecord::Base
   def self.popular_shows
     show = Show.where("rating > ?", 5)
   end
+  def self.shows_by_alphabetical_order
+    binding.pry
+    show = Show.order(':name')
+  end
 
 end
